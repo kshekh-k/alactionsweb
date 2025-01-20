@@ -15,9 +15,9 @@ export type FormSubmit = {
 export async function POST(req: NextRequest) {
   const body = (await req.json()) as FormSubmit;
 
-  const client_email = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL;
-  const private_key = process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY;
-  const spreadsheet_id = process.env.NEXT_PUBLIC_GOOGLE_SPREADSHEET_ID;
+  const client_email = '' //process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL;
+  const private_key = '' //process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY;
+  const spreadsheet_id = '' //process.env.NEXT_PUBLIC_GOOGLE_SPREADSHEET_ID;
 
   const auth = new google.auth.GoogleAuth({
     credentials: {
