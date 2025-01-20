@@ -13,12 +13,10 @@
 # testing
 /coverage
 
-./site-info.txt
-requests.http
 # next.js
 /.next/
 /out/
-./site-info.txt
+
 # production
 /build
 
@@ -30,6 +28,7 @@ requests.http
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
 .env*
