@@ -21,8 +21,8 @@ function Header() {
   };
   return (
     <>
-      <header className='relative z-10 bg-gradient-1'>
-        <div className='text-primary'>
+      <header className='z-10 fixed inset-x-0 top-0'>
+        <div className='max-w-screen-xl px-5 mx-auto'>
           <nav className='container'>
             <div className='flex justify-between'>
               <Link href='/' className='py-4'>
@@ -37,16 +37,16 @@ function Header() {
               <Menu />
               <Button
                 onClick={openContactDialog}
-                className='!h-8 self-center px-3 text-sm boder-white border-2 font-medium bg-secondary-50 text-white duration-200 ease-in-out hover:bg-secondary sm:!h-12 sm:px-5 sm:text-base lg:px-7 xl:px-10'
+                className='!h-8 self-center px-3 text-sm boder-white border-2 font-medium !bg-transparent text-white duration-200 ease-in-out hover:!bg-secondary sm:!h-12 sm:px-5 sm:text-base lg:px-7 xl:px-10'
               >
-               Contact Us
+                Contact Us
               </Button>
 
               <Button
                 onClick={openContactDialog}
-                className='!h-8 self-center px-3 ml-2  text-sm font-medium text-secondary-50  duration-200 ease-in-out hover:bg-secondary sm:!h-12 sm:px-5 sm:text-base lg:px-7 xl:px-10'
+                className='!h-8 self-center px-3 ml-2  text-sm font-medium text-secondary-50 duration-200 ease-in-out hover:!bg-secondary/50 sm:!h-12 sm:px-5 sm:text-base lg:px-7 xl:px-10'
               >
-               Get a Quote
+                Get a Quote
               </Button>
             </div>
           </nav>
