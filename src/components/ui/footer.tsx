@@ -52,7 +52,7 @@ export default function Footer() {
             />
             <p className='pt-3 text-sm leading-normal text-white/50 md:pt-5'>
               Advika cloud Data Center Services provides complete solutions for
-              businesses seeking secure and reliable hosting.
+              businesses seeking secure and reliable hosting. kjjhjkhjkh
             </p>
           </div>
           <div className='col-span-6 flex justify-center'>
