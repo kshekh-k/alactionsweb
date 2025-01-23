@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { Button } from './button';
 import Menu from './menu';
+import { useState, useEffect } from "react";
 // import { TbPhoneCall, TbMail } from 'react-icons/tb';
 // import DialogCustom from './dialog-custom';
 // import Formcontact from '../partials/form';
@@ -19,9 +20,27 @@ function Header() {
   const onDialogOpenChange = (open: boolean) => {
     setOpenDialog(open);
   };
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <header className='z-10 fixed inset-x-0 top-0'>
+      <header className={`z-10 fixed top-0  inset-x-0 transition-all ${
+        isScrolled ? "bg-secondary-100 shadow-md" : "bg-transparent"
+      }`}>
         <div className='max-w-screen-xl px-5 mx-auto'>
           <nav className='container'>
             <div className='flex justify-between'>

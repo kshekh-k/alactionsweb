@@ -40,7 +40,7 @@ const HelpSupport = [
 export default function Footer() {
   const currentyear = new Date().getFullYear();
   return (
-    <footer className='bg-primary pt-10 text-white xl:pt-20'>
+    <footer className='bg-secondary-100 pt-10 text-white xl:pt-20'>
       <div className='container'>
         <div className='flex flex-col gap-5 lg:grid lg:grid-cols-12 lg:gap-12'>
           <div className='col-span-3 space-y-2'>

@@ -6,6 +6,8 @@ import Layout from '@/components/layout';
 import Aboutus from './aboutus';
 import States from './states';
 import Services from './services';
+import Crmplans from './crmplans';
+import Faqaccordian from './faqaccordian';
 
 function HomeComponent() {
   const [openDialog, setOpenDialog] = React.useState(false);
@@ -24,6 +26,8 @@ function HomeComponent() {
         <Aboutus/>
         <States/>
         <Services/>
+        <Crmplans/>
+        <Faqaccordian/>
       </Layout>
 
     </>
