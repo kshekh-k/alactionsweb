@@ -29,7 +29,7 @@ const Crmplans = () => {
         </div> */}
       </div>
 
-      <div className="flex items-center justify-center p-10 py-20">
+      <div className="flex items-center justify-center  mx-auto max-w-screen-xl pt-32 py-28">
         <div className="border-2 max-w-96 rounded-md mx-auto px-5 py-10">
           <div className="flex flex-col gap-5 items-center">
             <h2 className="font-medium text-3xl text-naviblue-50">STATIC</h2>
