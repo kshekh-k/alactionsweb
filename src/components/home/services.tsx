@@ -27,7 +27,7 @@ const Services = () => {
               <h3 className="text-2xl font-medium text-naviblue-100">
                 Website Designing
               </h3>
-              <p className="text-xl text-naviblue-300">
+              <p className="text-xl text-naviblue-300 ">
                 Our web design service focuses on creating visually appealing,
                 user-friendly, and responsive websites tailored to your brand.
                 We combine creativity with functionality to deliver designs that
