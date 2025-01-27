@@ -6,6 +6,39 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const Accordinitems = [
+  {
+    id: "1",
+    title: "What types of web development services do you offer?",
+    paragraph: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "2",
+    title: "Do you work with custom designs, templates, or both?",
+    paragraph: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "3",
+    title: "What platforms or technologies do you specialize in",
+    paragraph: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "4",
+    title: "Do you provide eCommerce development services?",
+    paragraph: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "5",
+    title: "Can you help with hosting and server setup?",
+    paragraph: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: "6",
+    title: "Do you provide SEO and digital marketing services?",
+    paragraph: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+];
+
 const Faqaccordian = () => {
   return (
     <section className="bg-litewhite-100 pt-20 py-32">
@@ -21,43 +54,19 @@ const Faqaccordian = () => {
             </p>
           </div>
           <div className="">
-            <Accordion type="single" collapsible className="flex flex-col gap-5"> 
-              <AccordionItem value="item-1">
-                <AccordionTrigger>What types of web development services do you offer?</AccordionTrigger>
-                <AccordionContent className="px-5 ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Do you work with custom designs, templates, or both?</AccordionTrigger>
-                <AccordionContent className="px-5 ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>What platforms or technologies do you specialize in?</AccordionTrigger>
-                <AccordionContent className="px-5 ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Do you provide eCommerce development services?</AccordionTrigger>
-                <AccordionContent className="px-5 ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Can you help with hosting and server setup?</AccordionTrigger>
-                <AccordionContent className="px-5 ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-6">
-                <AccordionTrigger>Do you provide SEO and digital marketing services?</AccordionTrigger>
-                <AccordionContent className="px-5 ">
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
+            <Accordion
+              type="single"
+              collapsible
+              className="flex flex-col gap-5"
+            >
+              {Accordinitems.map((item, index) => (
+                <AccordionItem key={index} value={item.id}>
+                  <AccordionTrigger>{item.title}</AccordionTrigger>
+                  <AccordionContent className="px-5 ">
+                    {item.paragraph}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>

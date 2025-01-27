@@ -63,7 +63,7 @@ function Header() {
 
               <Button
                 onClick={openContactDialog}
-                className='!h-8 self-center px-3 ml-2  text-sm font-medium text-secondary-50 duration-200 ease-in-out hover:!bg-secondary/50 sm:!h-12 sm:px-5 sm:text-base lg:px-7 xl:px-10'
+                className='!h-8 self-center px-3 ml-2 bg-primary-50  text-sm font-medium text-secondary-50 duration-200 ease-in-out hover:!bg-secondary/50 sm:!h-12 sm:px-5 sm:text-base lg:px-7 xl:px-10'
               >
                 Get a Quote
               </Button>

@@ -7,6 +7,26 @@ import { Copy, Pen, PenIcon } from "lucide-react";
 import { LiaPenNibSolid } from "react-icons/lia";
 import Gallery from "@/icons/svgs/gallery";
 import Copypen from "@/icons/svgs/copy";
+import { it } from "node:test";
+
+
+const Servicesitems =[
+  {
+    icon: <LiaPenNibSolid className="size-12"/>,
+    name:'Stunning Websites',
+    paragraph:'Type a prompt, get a full website using power of cutting-edge AI technology'
+  },
+  {
+    icon:<Copypen />,             
+    name:'Compelling Copie',
+    paragraph:'Generate all your website content in two steps—a prompt & a click!'
+  },
+  {
+    icon:<Gallery />,
+    name:'Pixel Perfect Images',
+    paragraph:'>Type a prompt and generate the exact image on your mind.'
+  },
+]
 
 const Desing = () => {
   return (
@@ -62,27 +82,14 @@ const Desing = () => {
           </div>
         </div>
         <hr className="mt-20 bg-litewhite-50" />
-            <div className="flex items-center gap-10 py-20">
-                <div className="flex flex-col gap-5 px-2">
-                <LiaPenNibSolid className="size-10 text-primary-50"/>
-                <h3 className="text-white text-2xl font-medium">Stunning Websites</h3>
-                <p className="text-lg text-litewhite-50 max-w-96">Type a prompt, get a full website using 
-                power of cutting-edge AI technology</p>
-                </div>
-                <div className="flex flex-col gap-5 px-2">
-                     <Copypen className="size-10 text-primary-50"/>
-                 
-                <h3 className="text-white text-2xl font-medium">Compelling Copies</h3>
-                <p className="text-lg text-litewhite-50 max-w-96">Generate all your website content in two 
-                steps—a prompt & a click!</p>
-                </div>
-                <div className="flex flex-col gap-5 px-2">
-                    <Gallery className="size-10 text-primary-50"/>
-                <h3 className="text-white text-2xl font-medium">Pixel Perfect Images</h3>
-                <p className="text-lg text-litewhite-50 max-w-96">Type a prompt and generate the exact 
-                image on your mind.</p>
-                </div>
-            </div>
+             
+            <div className="flex items-center gap-10 py-20">{Servicesitems.map((item,index)=>(
+              <div key={index} className="flex flex-col gap-5 px-2">
+                <span className="size-10 text-primary-50">{item.icon}</span>
+                <h3 className="text-white text-2xl font-medium">{item.name}</h3>
+                <p className="text-lg text-litewhite-50 max-w-96">{item.paragraph}</p>
+              </div>
+            ))}</div>
       </div>
     </section>
   );

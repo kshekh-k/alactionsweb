@@ -114,7 +114,10 @@ export default {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+  		},
+		boxShadow:{
+				 1:'rgba(0, 0, 0, 0.05) 0px 5px 15px 0px'
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -27,8 +27,7 @@ const mainmenu = [
 ];
 function Menu() {
   const [isSidePanelOpen, setSidePanelOpen] = React.useState(false);
-  const pathname = usePathname();
-  const isActive = pathname;
+  const isActive = usePathname(); 
 
   const openSidePanel = () => setSidePanelOpen(true);
   const closeSidePanel = () => setSidePanelOpen(false);
